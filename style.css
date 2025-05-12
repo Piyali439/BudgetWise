@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --main-color: #2b3a67;
+  --accent-color: #f76c6c;
+  --light-bg: #f4f6f8;
+  --light-text: #888;
+  --success-color: #4caf50;
+  --error-color: #e53935;
+  --card-bg: #ffffff;
+  --radius: 6px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+main.container {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+header p {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.balance {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-bg);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+}
+
+.summary div {
+  text-align: center;
+  flex: 1;
+}
+
+.summary div:first-child {
+  border-right: 1px solid #ddd;
+}
+
+.money {
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+.money.plus {
+  color: var(--success-color);
+}
+
+.money.minus {
+  color: var(--error-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+button.btn {
+  background: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background: #1f2b50;
+}
+
+ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.list li {
+  background: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid var(--main-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+ul.list li.plus {
+  border-left-color: var(--success-color);
+}
+
+ul.list li.minus {
+  border-left-color: var(--error-color);
+}
+
+.delete-btn {
+  background: var(--error-color);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: -45px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+ul.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.notification-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--error-color);
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.notification-container.show {
+  display: block;
+}
+.btn.danger {
+  background-color: #c0392b;
+  color: #fff;
+}
