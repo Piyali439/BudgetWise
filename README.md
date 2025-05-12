@@ -5,16 +5,24 @@ A simple and lightweight web-based Expense Tracker that helps users keep track o
 **Features**
 
 Add income and expense transactions
+
 View your total balance, income, and expenses
+
 Delete individual transactions
+
 Clear full transaction history
+
 Responsive, minimal UI
+
 No external database required — data is stored locally
 
 **Technologies Used**
 
 HTML5
+
 CSS3
+
 JavaScript (Vanilla)
+
 Local Storage API
 
